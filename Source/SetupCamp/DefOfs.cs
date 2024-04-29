@@ -12,16 +12,16 @@ using UnityEngine;
 
 namespace Syrchalis_SetUpCamp
 {
-    [DefOf]
-    public static class SetUpCampDefOf
-    {
-        static SetUpCampDefOf()
-        {
-            DefOfHelper.EnsureInitializedInCtor(typeof(SetUpCampDefOf));
-        }
-        public static WorldObjectDef CaravanCamp;
-        public static WorldObjectDef AbandonedCamp;
-        public static MapGeneratorDef Syr_SetUpCamp;
-        public static MapGeneratorDef Syr_SetUpCampNR;
-    }
+	[DefOf]
+	public static class SetUpCampDefOf
+	{
+		static SetUpCampDefOf()
+		{
+			DefOfHelper.EnsureInitializedInCtor(typeof(SetUpCampDefOf));
+		}
+		public static WorldObjectDef CaravanCamp;
+		public static WorldObjectDef AbandonedCamp;
+		public static MapGeneratorDef Syr_SetUpCamp;
+		public static MapGeneratorDef Syr_SetUpCampNR;
+	}
 }

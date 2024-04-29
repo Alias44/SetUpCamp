@@ -8,18 +8,18 @@ using Verse;
 
 namespace Syrchalis_SetUpCamp
 {
-    class MultiplayerCompatability
-    {
-        [StaticConstructorOnStartup]
-        static class MultiplayerCompatibility
-        {
-            static MultiplayerCompatibility()
-            {
-                if (!MP.enabled) return;
+	class MultiplayerCompatability
+	{
+		[StaticConstructorOnStartup]
+		static class MultiplayerCompatibility
+		{
+			static MultiplayerCompatibility()
+			{
+				if (!MP.enabled) return;
 
-                MP.RegisterSyncMethod(typeof(SetUpCamp_Utility), nameof(SetUpCamp_Utility.Camp));
+				MP.RegisterSyncMethod(typeof(SetUpCamp_Utility), nameof(SetUpCamp_Utility.Camp));
 
-            }
-        }
-    }
+			}
+		}
+	}
 }
