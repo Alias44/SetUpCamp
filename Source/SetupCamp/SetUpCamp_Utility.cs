@@ -49,7 +49,7 @@ namespace Syrchalis_SetUpCamp
             Faction faction = caravan.Faction;
             if (faction != Faction.OfPlayer)
             {
-                Log.Error("Cannot camp with non-player faction.", false);
+                Log.Error("Cannot camp with non-player faction.");
                 return;
             }
             string randomSeed = Find.TickManager.TicksAbs.ToString();
@@ -89,5 +89,25 @@ namespace Syrchalis_SetUpCamp
             Find.World.info.seedString = cachedSeedString;
             return generatedMap;
         }
+
+        public static void ConfigureCaravanCamp()
+        {
+			if (SetUpCampSettings.homeEvents)
+			{
+				SetUpCampDefOf.CaravanCamp.IncidentTargetTags.Add(IncidentTargetTagDefOf.Map_PlayerHome);
+			}
+			else
+			{
+				SetUpCampDefOf.CaravanCamp.IncidentTargetTags.Remove(IncidentTargetTagDefOf.Map_PlayerHome);
+			}
+			if (SetUpCampSettings.caravanEvents)
+			{
+				SetUpCampDefOf.CaravanCamp.IncidentTargetTags.Add(IncidentTargetTagDefOf.Map_Misc);
+			}
+			else
+			{
+				SetUpCampDefOf.CaravanCamp.IncidentTargetTags.Remove(IncidentTargetTagDefOf.Map_Misc);
+			}
+		}
     }
 }

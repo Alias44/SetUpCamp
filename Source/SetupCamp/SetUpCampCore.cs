@@ -52,23 +52,9 @@ namespace Syrchalis_SetUpCamp
         public override void WriteSettings()
         {
             base.WriteSettings();
-            if (SetUpCampSettings.homeEvents)
-            {
-                SetUpCampDefOf.CaravanCamp.IncidentTargetTags.Add(IncidentTargetTagDefOf.Map_PlayerHome);
-            }
-            else
-            {
-                SetUpCampDefOf.CaravanCamp.IncidentTargetTags.Remove(IncidentTargetTagDefOf.Map_PlayerHome);
-            }
-            if (SetUpCampSettings.caravanEvents)
-            {
-                SetUpCampDefOf.CaravanCamp.IncidentTargetTags.Add(IncidentTargetTagDefOf.Caravan);
-            }
-            else
-            {
-                SetUpCampDefOf.CaravanCamp.IncidentTargetTags.Remove(IncidentTargetTagDefOf.Caravan);
-            }
-            SetUpCampDefOf.CaravanCamp.ResolveReferences();
+
+			SetUpCamp_Utility.ConfigureCaravanCamp();
+			SetUpCampDefOf.CaravanCamp.ResolveReferences();
         }
     }
 
