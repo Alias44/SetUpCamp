@@ -8,6 +8,7 @@
 	</authors>
 	<supportedVersions>
 		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<description>Set up camp, once again! For all your caravan managing needs, you can now set up camp anywhere. You can customize the possible size of the map, the duration you are allowed to stay, the time the tile is blocked after abandoning a camp and turn events on the camp map on/off.
 	
@@ -16,7 +17,7 @@ It is recommended to use settings close to the default and not turn the map time
 	Originally by Nandonalt
 	Re-coded and improved by Syrchalis
 	Assistance provided by spd, potatoclip</description>
-	<packageId>syrchalis.setupcamp</packageId>
+	<packageId>alias.setupcamp</packageId>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- Settings -->
+	<SetUpCampSettings>Set Up Camp</SetUpCampSettings>
+	<SetUpCampNote>Note: these values are no retrocative and will not effect existing camps</SetUpCampNote>
+	
+	<AbandonedCampDuration>Abandoned Camp duration (days)</AbandonedCampDuration>
+	<AbandonedCampDurationTooltip>The number of days abandoned campsites will persist on the world map.\nEnter 0 to disable.</AbandonedCampDurationTooltip>
+	
+	<RaidTimer>Raid timer</RaidTimer>
+	<RaidTimerTooltip>Roughly number of days before a campsite will be raided.\nEnter 0 to disable.</RaidTimerTooltip>
+	
+	<OverideCampSize>Overide camp map size</OverideCampSize>
+</LanguageData>
