@@ -1,7 +1,0 @@
-C:\Program Files (x86)\Games\Steam\steamapps\common\RimWorld\Mods\SetUpCamp\Source\SetUpCamp\bin\Debug\SetUpCamp.dll
-C:\Program Files (x86)\Games\Steam\steamapps\common\RimWorld\Mods\SetUpCamp\Source\SetUpCamp\bin\Debug\SetUpCamp.pdb
-C:\Program Files (x86)\Games\Steam\steamapps\common\RimWorld\Mods\SetUpCamp\Source\SetUpCamp\obj\Debug\SetUpCamp.csproj.AssemblyReference.cache
-C:\Program Files (x86)\Games\Steam\steamapps\common\RimWorld\Mods\SetUpCamp\Source\SetUpCamp\obj\Debug\SetUpCamp.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Games\Steam\steamapps\common\RimWorld\Mods\SetUpCamp\Source\SetUpCamp\obj\Debug\SetUpCamp.dll
-C:\Program Files (x86)\Games\Steam\steamapps\common\RimWorld\Mods\SetUpCamp\1.5\Assemblies\SetUpCamp.dll
-C:\Program Files (x86)\Games\Steam\steamapps\common\RimWorld\Mods\SetUpCamp\Source\SetUpCamp\obj\Debug\SetUpCamp.csproj.Up2Date
