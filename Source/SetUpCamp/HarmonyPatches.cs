@@ -1,6 +1,7 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
+using System.Collections.Generic;
 using Verse;
 
 namespace SetUpCamp;
@@ -13,6 +14,13 @@ public class HarmonyPatches : Mod
 
 		harmony.Patch(AccessTools.Method(typeof(Camp), "Notify_MyMapRemoved"), postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(CampMapRemoved)));
 		harmony.Patch(AccessTools.Method(typeof(SettleInEmptyTileUtility), "SetupCamp"), postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(SetupCamp)));
+
+		// Add a custom back compatibility to the conversion chain
+		List<BackCompatibilityConverter> compatibilityConverters =
+			AccessTools.StaticFieldRefAccess<List<BackCompatibilityConverter>>(typeof(BackCompatibility),
+				"conversionChain");
+
+		compatibilityConverters.Add(new BackCompatibilityConverter_Camp());
 	}
 
 	/// <summary>Prempt camp ruin generation and subsitute hardcoded timer with modified value</summary>

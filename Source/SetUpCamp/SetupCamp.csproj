@@ -33,6 +33,7 @@
     <DefineConstants>RELEASE_CURRENT</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BackCompatibilityConverter_Camp.cs" />
     <Compile Include="CustomListing.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="SetUpCamp.cs" />
