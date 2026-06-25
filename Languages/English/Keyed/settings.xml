@@ -4,6 +4,8 @@
 	<SetUpCampSettings>Set Up Camp</SetUpCampSettings>
 	<SetUpCampNote>Note: these values are no retrocative and will not effect existing camps</SetUpCampNote>
 	
+	<MapSizeMini>Mini</MapSizeMini>
+	
 	<AbandonedCampDuration>Abandoned Camp duration (days)</AbandonedCampDuration>
 	<AbandonedCampDurationTooltip>The number of days abandoned campsites will persist on the world map.\nEnter 0 to disable.</AbandonedCampDurationTooltip>
 	
