@@ -54,11 +54,15 @@ public class SetUpCampMod : Mod
 		}
 
 		listing.GapLine();
+		listing.Gap();
 
 		listing.TextFieldNumericLabeled("AbandonedCampDuration".Translate(), ref SetUpCampSettings.ruinDuration, ref ruinBuff, "AbandonedCampDurationTooltip".Translate(), 0, split: 0.75f);
 		listing.Gap();
 
 		listing.TextFieldNumericLabeled("RaidTimer".Translate(), ref SetUpCampSettings.raidTimer, ref raidBuff, "RaidTimerTooltip".Translate(), 0, split: 0.75f);
+		listing.Gap();
+
+		listing.CheckboxLabeled("CampResources".Translate(), ref SetUpCampSettings.campResources, "CampResourcesTooltip".Translate());
 
 		listing.NewColumn();
 		listing.CheckboxLabeled("OverideCampSize".Translate(), ref SetUpCampSettings.overideCampSize);
@@ -129,6 +133,8 @@ public class SetUpCampSettings : ModSettings
 	public static float ruinDuration = baseRuinDays;
 	public static float raidTimer = baseRaidDays;
 
+	public static bool campResources = false;
+
 	public static int RuinTicks => GenDate.DaysToTicks(ruinDuration);
 
 	public static int RaidTicks => GenDate.DaysToTicks(raidTimer);
@@ -152,5 +158,6 @@ public class SetUpCampSettings : ModSettings
 		campSize = null;
 		ruinDuration = baseRuinDays;
 		raidTimer = baseRaidDays;
+		campResources = false;
 	}
 }

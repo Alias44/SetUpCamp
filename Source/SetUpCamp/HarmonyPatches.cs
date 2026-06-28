@@ -1,8 +1,13 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
+using System;
 using System.Collections.Generic;
+using System.EnterpriseServices;
+using System.Reflection;
+using System.Reflection.Emit;
 using Verse;
+using Verse.Noise;
 
 namespace SetUpCamp;
 
@@ -14,6 +19,8 @@ public class HarmonyPatches : Mod
 
 		harmony.Patch(AccessTools.Method(typeof(Camp), "Notify_MyMapRemoved"), postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(CampMapRemoved)));
 		harmony.Patch(AccessTools.Method(typeof(SettleInEmptyTileUtility), "SetupCamp"), postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(SetupCamp)));
+
+		harmony.Patch(AccessTools.Method(typeof(GenStep_ScatterLumpsMineable), "Generate"), prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(GenerateResources)));
 
 		// Add a custom back compatibility to the conversion chain
 		List<BackCompatibilityConverter> compatibilityConverters =
@@ -68,5 +75,17 @@ public class HarmonyPatches : Mod
 		{
 			LongEventHandler.QueueLongEvent(() => GenerateCamp(caravan), "GeneratingMap", doAsynchronously: true, GameAndMapInitExceptionHandlers.ErrorWhileGeneratingMap);
 		};
+	}
+
+	/// <summary>Modify map generation step to allows camp maps to have resources (makes RocksFromGrid_NoMinerals dynamically behave like RocksFromGrid)</summary>
+	/// <remarks>Techincally, the responsible logic is in GenStep_RocksFromGrid.Generate(), but tweaking that would require a transpiler to target and modify the branch chanin.</remarks>
+	[HarmonyPrefix]
+	public static void GenerateResources(GenStep_ScatterLumpsMineable __instance, ref Map map)
+	{
+		// maxValue = 0 comes from the maxMineableValue in RocksFromGrid_NoMinerals
+		if (!SetUpCampSettings.campResources && __instance.maxValue == 0 && map.generatorDef.Equals(MapGeneratorDefOf.Encounter) && map.Parent.def.Equals(WorldObjectDefOf.Camp))
+		{
+			__instance.maxValue = float.MaxValue;
+		}
 	}
 }
