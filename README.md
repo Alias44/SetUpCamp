@@ -21,6 +21,7 @@ Camps from previous version of this mod will be converted into vanilla camps. Th
 Incompatibilities & Interactions:
 
 - ReGrowth2: when re-entering an abandoned camp, the configurations for map size and timers will be ignored.
+- Other mods that add resources to incident maps (like FSF's [Encounter Map Resources](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=1417825411)): should be fully compatible, but I would advise leaving the "Camp resource" setting off.
 - This mod is rather aggressive in how it patches the vanilla camp generation code (the delegate is replaced entirely), which isn't necessarily great in terms of inter-mod compatibility. I'm not aware of any mods that also mess with that particular code, but I'm disclosing it because it has to potential to create a subtle conflict. If it's an issue, open an issue or drop me a bug report and I'll rework it.
 
 
