@@ -1,13 +1,8 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
-using System;
 using System.Collections.Generic;
-using System.EnterpriseServices;
-using System.Reflection;
-using System.Reflection.Emit;
 using Verse;
-using Verse.Noise;
 
 namespace SetUpCamp;
 
@@ -41,7 +36,7 @@ public class HarmonyPatches : Mod
 		abandonedCamp?.GetComponent<TimeoutComp>().StartTimeout(SetUpCampSettings.RuinTicks);
 	}
 
-	/// <summary> The innermost delagate of the SetupCamp method, modified to add custom map size and raid timeouts</summary>
+	/// <summary>The innermost delagate of the SetupCamp method, modified to add custom map size and raid timeouts</summary>
 	public static void GenerateCamp(Caravan caravan)
 	{
 		IntVec3 mapSize = SetUpCampSettings.campSize ?? WorldObjectDefOf.Camp.overrideMapSize ?? Find.World.info.initialMapSize;

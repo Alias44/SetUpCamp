@@ -2,18 +2,17 @@
 <LanguageData>
 	<!-- Settings -->
 	<SetUpCampSettings>Set Up Camp</SetUpCampSettings>
-	<SetUpCampNote>Note: these values are not retrocative and will not effect existing camps</SetUpCampNote>
-	
-	<MapSizeMini>Mini</MapSizeMini>
+	<SetUpCampNote>Note: these values are not retroactive and will not effect existing camps</SetUpCampNote>
+
+	<CampResources>Camp resources</CampResources>
+	<CampResourcesTooltip>Allow camp maps to generate non-rock resources.</CampResourcesTooltip>
+
+	<RaidTimer>Raid timer</RaidTimer>
+	<RaidTimerTooltip>Roughly the number of days before a campsite will be raided.\nEnter 0 to disable.</RaidTimerTooltip>
 	
 	<AbandonedCampDuration>Abandoned camp duration (days)</AbandonedCampDuration>
 	<AbandonedCampDurationTooltip>The number of days abandoned campsites will persist on the world map.\nEnter 0 to disable.</AbandonedCampDurationTooltip>
 	
-	<RaidTimer>Raid timer</RaidTimer>
-	<RaidTimerTooltip>Roughly the number of days before a campsite will be raided.\nEnter 0 to disable.</RaidTimerTooltip>
-	
-	<CampResources>Camp resources</CampResources>
-	<CampResourcesTooltip>Allow camp maps to generate non-rock resources.</CampResourcesTooltip>
-	
-	<OverideCampSize>Overide camp map size</OverideCampSize>
+	<OverideCampSize>Override camp map size</OverideCampSize>
+	<MapSizeMini>Mini</MapSizeMini>
 </LanguageData>

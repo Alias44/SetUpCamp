@@ -56,13 +56,13 @@ public class SetUpCampMod : Mod
 		listing.GapLine();
 		listing.Gap();
 
-		listing.TextFieldNumericLabeled("AbandonedCampDuration".Translate(), ref SetUpCampSettings.ruinDuration, ref ruinBuff, "AbandonedCampDurationTooltip".Translate(), 0, split: 0.75f);
+		listing.CheckboxLabeled("CampResources".Translate(), ref SetUpCampSettings.campResources, "CampResourcesTooltip".Translate());
 		listing.Gap();
 
 		listing.TextFieldNumericLabeled("RaidTimer".Translate(), ref SetUpCampSettings.raidTimer, ref raidBuff, "RaidTimerTooltip".Translate(), 0, split: 0.75f);
 		listing.Gap();
 
-		listing.CheckboxLabeled("CampResources".Translate(), ref SetUpCampSettings.campResources, "CampResourcesTooltip".Translate());
+		listing.TextFieldNumericLabeled("AbandonedCampDuration".Translate(), ref SetUpCampSettings.ruinDuration, ref ruinBuff, "AbandonedCampDurationTooltip".Translate(), 0, split: 0.75f);
 
 		listing.NewColumn();
 		listing.CheckboxLabeled("OverideCampSize".Translate(), ref SetUpCampSettings.overideCampSize);
@@ -111,6 +111,8 @@ public class SetUpCampMod : Mod
 		{
 			SetUpCampSettings.campSize = null;
 		}
+
+		listing.End();
 	}
 
 }
