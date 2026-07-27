@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/WorldObjectDef[defName="Camp"]/comps</xpath>
+		<value>
+		<li Class="SetUpCamp.WorldObjectCompProperties_PermaCamp" />
+		</value>
+	</Operation>
+</Patch>

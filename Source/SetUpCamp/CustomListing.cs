@@ -48,4 +48,15 @@ public class CustomListing : Listing_Standard
 		Widgets.TextFieldNumeric(inputArea, ref val, ref buffer, min, max);
 	}
 
+	/// <summary>
+	/// Modified label to allow setting a label color (without the boilerplate of setting and changing it back after the listing)
+	/// </summary>
+	public void Label(TaggedString label, Color color, float maxHeight = -1f, string tooltip = null)
+	{
+		Color defaultColor = GUI.color;
+		GUI.color = color;
+		this.Label(label, maxHeight, tooltip);
+		GUI.color = defaultColor;
+	}
+
 }

@@ -43,10 +43,7 @@ public class SetUpCampMod : Mod
 
 		listing.ColumnWidth = (inRect.width - Listing.ColumnSpacing) / 2;
 
-		Color defaultColor = GUI.color;
-		GUI.color = Color.yellow;
-		listing.Label("SetUpCampNote".Translate());
-		GUI.color = defaultColor;
+		listing.Label("SetUpCampNote".Translate(), Color.yellow);
 
 		if (listing.ButtonText("Reset".Translate()))
 		{
@@ -63,6 +60,22 @@ public class SetUpCampMod : Mod
 		listing.Gap();
 
 		listing.TextFieldNumericLabeled("AbandonedCampDuration".Translate(), ref SetUpCampSettings.ruinDuration, ref ruinBuff, "AbandonedCampDurationTooltip".Translate(), 0, split: 0.75f);
+		listing.Gap();
+
+		listing.CheckboxLabeled("PersistCamp".Translate(), ref SetUpCampSettings.persistCamps, "PersistCampTooltip".Translate());
+
+		if (SetUpCampSettings.persistCamps)
+		{
+			//listing.Label("PersistCampWarn".Translate(), Color.yellow);
+
+			listing.CheckboxLabeled("PersistCampDefault".Translate(), ref SetUpCampSettings.persistCampsDefault, "PersistCampDefaultTooltip".Translate());
+			listing.CheckboxLabeled("ConfirmEmptyCamps".Translate(), ref SetUpCampSettings.confirmEmptyCamps, "ConfirmEmptyCampsTooltip".Translate());
+		}
+		else
+		{
+			SetUpCampSettings.persistCampsDefault = false;
+			SetUpCampSettings.confirmEmptyCamps = true;
+		}
 
 		listing.NewColumn();
 		listing.CheckboxLabeled("OverideCampSize".Translate(), ref SetUpCampSettings.overideCampSize);
@@ -137,6 +150,10 @@ public class SetUpCampSettings : ModSettings
 
 	public static bool campResources = false;
 
+	public static bool persistCamps = false;
+	public static bool persistCampsDefault = false;
+	public static bool confirmEmptyCamps = true;
+
 	public static int RuinTicks => GenDate.DaysToTicks(ruinDuration);
 
 	public static int RaidTicks => GenDate.DaysToTicks(raidTimer);
@@ -154,6 +171,10 @@ public class SetUpCampSettings : ModSettings
 		}
 
 		Scribe_Values.Look(ref campResources, "campResources");
+		Scribe_Values.Look(ref persistCamps, "persistCamps");
+		Scribe_Values.Look(ref persistCampsDefault, "persistCampsDefault");
+		Scribe_Values.Look(ref confirmEmptyCamps, "confirmEmptyCamps");
+
 	}
 
 	public static void Reset()
@@ -163,5 +184,9 @@ public class SetUpCampSettings : ModSettings
 		ruinDuration = baseRuinDays;
 		raidTimer = baseRaidDays;
 		campResources = false;
+
+		persistCamps = false;
+		persistCampsDefault = false;
+		confirmEmptyCamps = true;
 	}
 }

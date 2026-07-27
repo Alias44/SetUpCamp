@@ -13,6 +13,8 @@ public class HarmonyPatches : Mod
 		var harmony = new Harmony("SetUpCamp.main");
 
 		harmony.Patch(AccessTools.Method(typeof(Camp), "Notify_MyMapRemoved"), postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(CampMapRemoved)));
+		harmony.Patch(AccessTools.Method(typeof(Camp), "ShouldRemoveMapNow"), postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(CampShouldRemoveMapNow)));
+
 		harmony.Patch(AccessTools.Method(typeof(SettleInEmptyTileUtility), "SetupCamp"), postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(SetupCamp)));
 
 		harmony.Patch(AccessTools.Method(typeof(GenStep_ScatterLumpsMineable), "Generate"), prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(GenerateResources)));
@@ -36,7 +38,14 @@ public class HarmonyPatches : Mod
 		abandonedCamp?.GetComponent<TimeoutComp>().StartTimeout(SetUpCampSettings.RuinTicks);
 	}
 
-	/// <summary>The innermost delagate of the SetupCamp method, modified to add custom map size and raid timeouts</summary>
+	public static void CampShouldRemoveMapNow(Camp __instance, ref bool alsoRemoveWorldObject, ref bool __result)
+	{
+		if (__result && SetUpCampSettings.persistCamps)
+		{
+			__result = !__instance.GetComponent<PermaCampComp>().persistent;
+			alsoRemoveWorldObject = __result;
+		}
+	}
 	public static void GenerateCamp(Caravan caravan)
 	{
 		IntVec3 mapSize = SetUpCampSettings.campSize ?? WorldObjectDefOf.Camp.overrideMapSize ?? Find.World.info.initialMapSize;
