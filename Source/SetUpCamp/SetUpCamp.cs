@@ -152,6 +152,8 @@ public class SetUpCampSettings : ModSettings
 		{
 			overideCampSize = true;
 		}
+
+		Scribe_Values.Look(ref campResources, "campResources");
 	}
 
 	public static void Reset()
