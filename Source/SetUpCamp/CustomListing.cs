@@ -14,7 +14,7 @@ public class CustomListing : Listing_Standard
 	/// <seealso cref="Listing_Standard.TextFieldNumericLabeled{T}(string, ref T, ref string, float, float)"/>
 	public void TextFieldNumericLabeled<T>(string label, ref T val, ref string buffer, string tooltip = null, float min = 0f, float max = 1E+09f, float split = 0.5f) where T : struct
 	{
-		//The game always assumes listings will be a single line. If needed `Text.CalcHeight(label, ColumnWidth)` will accomidate multiple lines
+		//The game always assumes listings will be a single line. If needed `Text.CalcHeight(label, ColumnWidth)` will accommodate multiple lines
 		Rect rect = GetRect(Text.LineHeight);
 		if (!BoundingRectCached.HasValue || rect.Overlaps(BoundingRectCached.Value))
 		{

@@ -25,7 +25,7 @@ public class SetUpCampMod : Mod
 	string raidBuff;
 	public override void DoSettingsWindowContents(Rect inRect)
 	{
-		// Initalize menu values (this is done in method level because Mod initalization occurs before the settings ExposeData is called)
+		// Initialize menu values (this is done in method level because Mod initialization occurs before the settings ExposeData is called)
 		ruinBuff = SetUpCampSettings.ruinDuration.ToString();
 		raidBuff = SetUpCampSettings.raidTimer.ToString();
 
@@ -82,7 +82,7 @@ public class SetUpCampMod : Mod
 
 		if (SetUpCampSettings.overideCampSize)
 		{
-			// This is hevaily derived from the Dialog_AdvancedGameConfig.DoWindowContents()
+			// This is heavily derived from the Dialog_AdvancedGameConfig.DoWindowContents()
 			Text.Font = GameFont.Medium;
 			listing.Label("MapSize".Translate());
 
