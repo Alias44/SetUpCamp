@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 	<Persistent>Persistent</Persistent>
-	<MarkPersistent>Mark camp as persistent</MarkPersistent>
+	<MarkPersistent>Mark persistent</MarkPersistent>
 	<PersistentDesc>This camp will not abandoned if colonists are no longer present</PersistentDesc>
 	
-	<UnmarkPersistent>Unmark camp as persistent</UnmarkPersistent>
+	<UnmarkPersistent>Unmark persistent</UnmarkPersistent>
 	<UnmarkPersistentDesc>This camp will be abandoned when colonists are no longer present</UnmarkPersistentDesc>
 	
 	<ConfirmUnmarkEmptyCamp>There are no colonists or animals at this camp. Are you sure you want to abandon it?</ConfirmUnmarkEmptyCamp>

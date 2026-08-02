@@ -15,8 +15,8 @@ public class PermaCampComp : WorldObjectComp
 	public bool persistent = false;
 
 	// todo: create custom claim variants
-	private static readonly Texture2D offTex = ContentFinder<Texture2D>.Get("UI/Designators/HomeAreaOff");
-	private static readonly Texture2D onTex = ContentFinder<Texture2D>.Get("UI/Designators/HomeAreaOn");
+	private static readonly Texture2D offTex = ContentFinder<Texture2D>.Get("UI/Commands/Unpersist");
+	private static readonly Texture2D onTex = ContentFinder<Texture2D>.Get("UI/Commands/Persist");
 
 	/// <summary>
 	/// Not strictly a necessary feature, but checking the settings value at the time of map creation allows the user to change the setting whenever

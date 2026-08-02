@@ -11,6 +11,7 @@ Settings:
 - Camp resource: allow camp maps to generate non-rock resources.
 - Raid timer: Roughly the number of days before a campsite will be raided (set 0 to disable).
 - Abandoned camp duration: The number of days abandoned campsites will persist on the world map (set 0 to disable).
+- Persistent camps: Enables permanent camps that can exists without colonists present.
 - Camp map size: It's not necessarily recommended to change this, but the option is there.
 
 Note: these settings are not retroactive, changing them will not effect existing camps
@@ -24,6 +25,8 @@ Incompatibilities & Interactions:
 - Other mods that add resources to incident maps (like FSF's [Encounter Map Resources](steam://openurl/https://steamcommunity.com/sharedfiles/filedetails/?id=1417825411)): should be fully compatible, but I would advise leaving the "Camp resource" setting off.
 - This mod is rather aggressive in how it patches the vanilla camp generation code (the delegate is replaced entirely), which isn't necessarily great in terms of inter-mod compatibility. I'm not aware of any mods that also mess with that particular code, but I'm disclosing it because it has to potential to create a subtle conflict. If it's an issue, open an issue or drop me a bug report and I'll rework it.
 
+## License
+While I would hope that this mod constitutes as fair use and complies with the [RimWorld EULA](https://rimworldgame.com/eula/) and [Ludeon community](https://ludeon.com/forums/index.php?topic=40838.0) rules, it should be noted that the art is directly derived from the [Ludeon public art assets](https://ludeon.com/forums/index.php?topic=2325.0) of which Ludeon Studios is the copyright owner. 
 
 ## Thanks
 * to [Syrchalis](https://steamcommunity.com/id/Syrchalis) for updating the mod v1.1 - 1.4
