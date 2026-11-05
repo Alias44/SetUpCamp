@@ -1,3 +1,6 @@
+# v2.0.2
+- RimWorld 1.7 update
+
 # v2.0.1
 - Added settings for permanent camps that can exists without colonists present. 
 - Bugfix: camp resource setting wasn't saved

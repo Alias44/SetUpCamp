@@ -21,8 +21,8 @@ public class SetUpCampMod : Mod
 
 	public override string SettingsCategory() => "SetUpCampSettings".Translate();
 
-	string ruinBuff;
-	string raidBuff;
+	string? ruinBuff;
+	string? raidBuff;
 	public override void DoSettingsWindowContents(Rect inRect)
 	{
 		// Initialize menu values (this is done in method level because Mod initialization occurs before the settings ExposeData is called)

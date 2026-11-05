@@ -6,9 +6,11 @@
 		<li>Syrchalis</li>
 		<li>Nandonalt</li>
 	</authors>
+	<modVersion>2.0.2</modVersion>
 	<supportedVersions>
 		<li>1.5</li>
 		<li>1.6</li>
+		<li>1.7</li>
 	</supportedVersions>
 	<description>With the addition of caravan camps in RimWorld 1.6, this mod is no longer needed to provide temporary rest stops for caravanning colonists, captives, critters, and/ or cannibals. It instead provides mod settings that can be used to customize various aspects of the vanilla camps.</description>
 	<packageId>Alias.SetUpCamp</packageId>

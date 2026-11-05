@@ -45,9 +45,7 @@ public class PermaCampComp : WorldObjectComp
 			action.icon = offTex;
 			action.action = delegate
 			{
-				
-				Camp c = this.parent as Camp;
-				if (!c.Map.mapPawns.AnyPawnBlockingMapRemoval && SetUpCampSettings.confirmEmptyCamps)
+				if (parent is Camp c && !c.Map.mapPawns.AnyPawnBlockingMapRemoval && SetUpCampSettings.confirmEmptyCamps)
 				{
 					Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmUnmarkEmptyCamp".Translate(), () => persistent = false));
 				}

@@ -2,7 +2,7 @@
 <LanguageData>
 	<Persistent>Persistent</Persistent>
 	<MarkPersistent>Mark persistent</MarkPersistent>
-	<PersistentDesc>This camp will not abandoned if colonists are no longer present</PersistentDesc>
+	<PersistentDesc>This camp will not be abandoned if colonists are no longer present</PersistentDesc>
 	
 	<UnmarkPersistent>Unmark persistent</UnmarkPersistent>
 	<UnmarkPersistentDesc>This camp will be abandoned when colonists are no longer present</UnmarkPersistentDesc>

@@ -9,7 +9,7 @@ namespace SetUpCamp;
 
 public class BackCompatibilityConverter_Camp : BackCompatibilityConverter
 {
-	Dictionary<string, string> renames = new Dictionary<string, string>()
+	Dictionary<string, string?> renames = new()
 		{
 			{ "CaravanCamp", "Camp" },
 			{ "Syr_SetUpCamp", "Encounter" },
@@ -18,7 +18,7 @@ public class BackCompatibilityConverter_Camp : BackCompatibilityConverter
 
 	public override bool AppliesToVersion(int majorVer, int minorVer) => majorVer == 1 && minorVer <= 5;
 
-	public override string BackCompatibleDefName(Type defType, string defName, bool forDefInjections = false, XmlNode node = null)
+	public override string? BackCompatibleDefName(Type defType, string defName, bool forDefInjections = false, XmlNode? node = null)
 	{
 		if (GenDefDatabase.GetDefSilentFail(defType, defName, false) == null)
 		{
@@ -30,7 +30,7 @@ public class BackCompatibilityConverter_Camp : BackCompatibilityConverter
 		return null;
 	}
 
-	public override Type GetBackCompatibleType(Type baseType, string providedClassName, XmlNode node)
+	public override Type? GetBackCompatibleType(Type baseType, string providedClassName, XmlNode node)
 	{
 		if (providedClassName.Equals("Syrchalis_SetUpCamp.CaravanCamp"))
 		{

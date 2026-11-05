@@ -12,7 +12,7 @@ public class CustomListing : Listing_Standard
 	/// Numeric entry with tooltip and modified text/ input split.
 	/// </summary>
 	/// <seealso cref="Listing_Standard.TextFieldNumericLabeled{T}(string, ref T, ref string, float, float)"/>
-	public void TextFieldNumericLabeled<T>(string label, ref T val, ref string buffer, string tooltip = null, float min = 0f, float max = 1E+09f, float split = 0.5f) where T : struct
+	public void TextFieldNumericLabeled<T>(string label, ref T val, ref string buffer, string? tooltip = null, float min = 0f, float max = 1E+09f, float split = 0.5f) where T : struct
 	{
 		//The game always assumes listings will be a single line. If needed `Text.CalcHeight(label, ColumnWidth)` will accommodate multiple lines
 		Rect rect = GetRect(Text.LineHeight);
@@ -51,7 +51,7 @@ public class CustomListing : Listing_Standard
 	/// <summary>
 	/// Modified label to allow setting a label color (without the boilerplate of setting and changing it back after the listing)
 	/// </summary>
-	public void Label(TaggedString label, Color color, float maxHeight = -1f, string tooltip = null)
+	public void Label(TaggedString label, Color color, float maxHeight = -1f, string? tooltip = null)
 	{
 		Color defaultColor = GUI.color;
 		GUI.color = color;
