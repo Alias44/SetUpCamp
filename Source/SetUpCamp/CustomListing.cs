@@ -35,7 +35,7 @@ public class CustomListing : Listing_Standard
 	/// <summary>
 	/// Modified Widget to allow altering the allocation of space between the text and input.
 	/// </summary>
-	/// <remarks>Widgets is static and can't be extended, so this lives with the other custom UI code</remarks>
+	/// <remarks>Widgets is a static and can't be extended, so this lives with the other custom UI code</remarks>
 	/// <seealso cref="Widgets.TextFieldNumericLabeled{T}(Rect, string, ref T, ref string, float, float)"/>
 	public void TextFieldNumericLabeled<T>(Rect rect, string label, ref T val, ref string buffer, float min = 0f, float max = 1E+09f, float split = 0.5f) where T : struct
 	{
