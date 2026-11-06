@@ -32,3 +32,9 @@ While I would hope that this mod constitutes as fair use and complies with the [
 * to [Syrchalis](https://steamcommunity.com/id/Syrchalis) for updating the mod v1.1 - 1.4
 * to [Nandonalt](https://ludeon.com/forums/index.php?action=profile;u=58544) for making the mod
 * to all the wonderful people on the RimWorld Discord
+
+## AI
+NO! NOPE! NEVER! Call me stubborn and old-fashioned, but there's no chance in this life or any other that I allow the glorified plagiarism machines anywhere near my projects.
+I take pride in my work and being able to say without a shadow of a doubt that human made every art asset, bit of code, and typo is deeply important to me.   
+
+![Made without AI badge](https://noailist.org/images/badge.png)
